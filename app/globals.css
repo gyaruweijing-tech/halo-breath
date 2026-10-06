@@ -1,0 +1,38 @@
+:root {
+  /* 深い夜の背景。中央がほんのり明るい */
+  --bg-outer: #05070d;
+  --bg-inner: #0b1018;
+  /* 光の輪の色（柔らかいティール〜白） */
+  --halo-core: 180, 230, 240;
+  --text: rgba(220, 232, 240, 0.72);
+  --text-dim: rgba(220, 232, 240, 0.32);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      var(--bg-inner) 0%,
+      var(--bg-outer) 70%
+    );
+  /* iOS のアドレスバー分も埋める */
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans",
+    "Noto Sans JP", sans-serif;
+}
